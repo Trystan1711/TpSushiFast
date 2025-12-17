@@ -3,7 +3,7 @@ import { useMenus } from "../hooks/use.Menus";
 import "./MenusDetails.css";
 
 function MenuDetails() {
-  const { id } = useParams();             // récupère :id dans l'URL
+  const { id } = useParams();
   const { menus, loading, error } = useMenus();
 
   if (loading) return <p>Chargement...</p>;

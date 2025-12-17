@@ -3,16 +3,12 @@ import './FiltersSidebar.css';
 function FiltersSidebar({ isOpen, onClose, filters, setFilters }) {
   return (
     <>
-      {/* Overlay sombre */}
       {isOpen && (
         <div className="filters-overlay" onClick={onClose} />
       )}
 
-      {/* Sidebar */}
       <div className={`filters-sidebar ${isOpen ? "open" : ""}`}>
         <div className="p-3">
-
-          {/* Titre + bouton fermer */}
           <div className="d-flex justify-content-between align-items-center mb-3">
             <h4>Filtres</h4>
             <button className="btn btn-sm btn-danger" onClick={onClose}>
@@ -20,7 +16,6 @@ function FiltersSidebar({ isOpen, onClose, filters, setFilters }) {
             </button>
           </div>
 
-          {/* FILTRE GAMME DE PRIX */}
           <div className="mb-3">
             <label className="mb-2">Gamme de prix</label>
             <div className="d-flex flex-column gap-2">
@@ -62,7 +57,6 @@ function FiltersSidebar({ isOpen, onClose, filters, setFilters }) {
             </div>
           </div>
 
-          {/* FILTRE SAVEUR */}
           <div className="mb-3">
             <label className="mb-2">Saveur</label>
             <div className="d-flex gap-2">
@@ -92,7 +86,6 @@ function FiltersSidebar({ isOpen, onClose, filters, setFilters }) {
             </div>
           </div>
 
-          {/* FILTRE ALIMENT SPÉCIFIQUE */}
           <div className="mb-3">
             <label className="mb-2">Aliment</label>
             <button
@@ -108,7 +101,6 @@ function FiltersSidebar({ isOpen, onClose, filters, setFilters }) {
             </button>
           </div>
 
-          {/* Réinitialisation */}
           <button
             className="btn btn-outline-secondary w-100"
             onClick={() =>

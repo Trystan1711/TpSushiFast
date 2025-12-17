@@ -12,13 +12,8 @@ function App() {
 
       <div className="content" style={{ paddingTop: "80px" }}>
         <Routes>
-          {/* Page d'accueil */}
           <Route path="/" element={<Accueil />} />
-
-          {/* Page détails */}
           <Route path="/menu/:id" element={<MenuDetails />} />
-
-          {/* Page liste */}
           <Route path="/liste" element={<Menus />} />
         </Routes>
       </div>

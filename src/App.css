@@ -9,7 +9,6 @@
   flex: 1;
 }
 
-/* === NAVBAR / HEADER === */
 .navbar {
   backdrop-filter: blur(20px);
   background: rgba(255, 255, 255, 0.95) !important;
@@ -59,7 +58,6 @@
   transform: scaleX(1);
 }
 
-/* === CARTES MENUS === */
 .card {
   border-radius: 12px;
   border: 1px solid rgba(236, 72, 153, 0.2);
@@ -105,7 +103,6 @@
   padding: 1.25rem 1.5rem;
 }
 
-/* === BOUTONS === */
 .btn-primary {
   --bs-btn-color: white;
   --bs-btn-bg: #ec4899;
@@ -162,7 +159,6 @@
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-/* === LISTES & TEXTES === */
 .container h2 {
   color: #f9fafb;
   font-size: 1.7rem;
@@ -182,7 +178,6 @@
   margin-bottom: 0.15rem;
 }
 
-/* === FOOTER === */
 footer {
   margin-top: auto;
   border-top: 1px solid rgba(236, 72, 153, 0.15);

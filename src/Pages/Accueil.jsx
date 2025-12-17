@@ -8,35 +8,29 @@ function Accueil() {
   const { menus, loading, error } = useMenus();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // État des filtres
   const [filters, setFilters] = useState({
     saveur: "",      
     priceRange: "",   
     aliment: ""       
   });
 
- 
   const [sortOrder, setSortOrder] = useState("");
 
   if (loading) return <p>Chargement...</p>;
   if (error) return <p>Erreur : {error.message}</p>;
 
- 
   const filteredMenus = menus.filter((menu) => {
- 
     if (
       filters.saveur &&
       !menu.saveurs.some(s => s.toLowerCase() === filters.saveur)
     ) return false;
 
-    
     if (filters.priceRange) {
       if (filters.priceRange === "low" && menu.prix > 13) return false;
       if (filters.priceRange === "mid" && (menu.prix < 15 || menu.prix > 20)) return false;
       if (filters.priceRange === "high" && menu.prix < 24) return false;
     }
 
-    // Filtre aliment spécifique
     if (filters.aliment) {
       if (!menu.aliments.some(a => a.nom === filters.aliment)) return false;
     }
@@ -44,17 +38,14 @@ function Accueil() {
     return true;
   });
 
-  // Tri des menus selon le sortOrder
   const sortedMenus = [...filteredMenus].sort((a, b) => {
     if (sortOrder === "asc") return a.prix - b.prix;
     if (sortOrder === "desc") return b.prix - a.prix;
-    return 0; // pas de tri
+    return 0;
   });
 
   return (
     <section className="accueil-page container mt-5">
-
-    
       <div className="accueil-header d-flex justify-content-between align-items-center mb-4">
         <div>
           <h1 className="accueil-title">Les différents menus</h1>
@@ -82,7 +73,6 @@ function Accueil() {
         </div>
       </div>
 
-      {/* Sidebar */}
       <FiltersSidebar
         isOpen={isSidebarOpen}
         onClose={() => setIsSidebarOpen(false)}
@@ -90,7 +80,6 @@ function Accueil() {
         setFilters={setFilters}
       />
 
-      {/* Liste des menus filtrés et triés */}
       <div className="row accueil-grid">
         {sortedMenus.map((menu) => (
           <div className="col-md-4 mb-5" key={menu.id}>
