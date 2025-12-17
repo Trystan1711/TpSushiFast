@@ -1,0 +1,172 @@
+/* === PAGE DETAILS MENU === */
+.menu-details-page {
+  color: #1f2937;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 0;
+}
+
+.menu-details-header {
+  margin-bottom: 2rem;
+}
+
+.details-kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #ec4899;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.details-title {
+  font-size: 2.5rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #1f2937;
+}
+
+.details-image-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(236, 72, 153, 0.2);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.12),
+    0 6px 15px rgba(236, 72, 153, 0.15),
+    0 0 0 1px rgba(236, 72, 153, 0.1);
+  background: white;
+  margin-bottom: 2rem;
+}
+
+.details-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.details-image-wrapper:hover .details-image {
+  transform: scale(1.03);
+}
+
+.details-meta {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(236, 72, 153, 0.1);
+  border: 1px solid rgba(236, 72, 153, 0.15);
+  margin-bottom: 2rem;
+}
+
+.details-meta p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(236, 72, 153, 0.1);
+  color: #1f2937;
+}
+
+.details-meta p:last-child {
+  border-bottom: none;
+}
+
+.details-meta p span {
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.details-meta p strong {
+  font-size: 1.25rem;
+  color: #ec4899;
+  font-weight: 700;
+}
+
+.details-card {
+  border-radius: 20px;
+  padding: 2rem;
+  background: white;
+  border: 1px solid rgba(236, 72, 153, 0.15);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(236, 72, 153, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.details-card h2,
+.details-card h3,
+.details-card h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.details-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.2rem;
+}
+
+.details-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-block: 0.5rem;
+  border-bottom: 1px dashed rgba(236, 72, 153, 0.2);
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.details-list li:last-child {
+  border-bottom: none;
+}
+
+.details-qty {
+  color: #ec4899;
+  font-weight: 700;
+  font-size: 1.05rem;
+  min-width: 2.5rem;
+}
+
+.details-name {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.details-flavors {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(244, 114, 182, 0.05) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(236, 72, 153, 0.1);
+}
+
+@media (max-width: 768px) {
+  .details-title {
+    font-size: 1.8rem;
+  }
+
+  .details-image-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .details-meta,
+  .details-card {
+    padding: 1.25rem;
+  }
+}
+
+
+

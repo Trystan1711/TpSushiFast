@@ -1,0 +1,158 @@
+/* === PAGE ACCUEIL === */
+
+
+.accueil-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/csm_sushi-kakkoii_2c56fe3133.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.accueil-page::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(255, 240, 245, 0.88) 50%,
+    rgba(255, 250, 252, 0.90) 100%
+  );
+  z-index: -1;
+}
+
+.accueil-header {
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.accueil-kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #ec4899;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.accueil-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
+}
+
+.accueil-subtitle {
+  max-width: 480px;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* Bouton "Voir plus" amélioré */
+.magic {
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border: none;
+}
+
+.magic:hover {
+  box-shadow: 
+    0 6px 20px rgba(236, 72, 153, 0.5),
+    0 4px 10px rgba(236, 72, 153, 0.4);
+  background: linear-gradient(135deg, #db2777 0%, #ec4899 100%);
+  color: white;
+}
+
+/* Boutons filtres et tri améliorés */
+.accueil-actions .btn {
+  white-space: nowrap;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.accueil-actions .btn-outline-primary {
+  background: white;
+  color: #ec4899;
+  border: 2px solid #ec4899;
+}
+
+.accueil-actions .btn-outline-primary:hover {
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  color: white;
+  border-color: #ec4899;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 4px 15px rgba(236, 72, 153, 0.4),
+    0 2px 6px rgba(236, 72, 153, 0.3);
+}
+
+.accueil-actions .btn-primary {
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  color: white;
+  border: 2px solid #ec4899;
+  box-shadow: 
+    0 4px 15px rgba(236, 72, 153, 0.4),
+    0 2px 6px rgba(236, 72, 153, 0.3);
+}
+
+.accueil-actions .btn-primary:hover {
+  background: linear-gradient(135deg, #db2777 0%, #ec4899 100%);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(236, 72, 153, 0.5),
+    0 4px 10px rgba(236, 72, 153, 0.4);
+}
+
+.accueil-grid {
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .accueil-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .accueil-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .accueil-actions .btn {
+    width: 100%;
+  }
+
+  .accueil-title {
+    font-size: 1.8rem;
+  }
+}
+
+
